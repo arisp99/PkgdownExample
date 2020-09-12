@@ -17,3 +17,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/arisp99/PkgdownExample
+BugReports: https://github.com/arisp99/PkgdownExample/issues
