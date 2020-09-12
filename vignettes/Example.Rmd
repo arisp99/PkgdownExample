@@ -1,0 +1,32 @@
+---
+title: "Example"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Example}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(PkgdownExample)
+library(gganimate)
+
+# Create a static ggplot
+p <- ggplot(iris, aes(x = Petal.Width, y = Petal.Length)) +
+  geom_point()
+
+plot(p)
+
+# Animate the plot
+p + transition_states(Species, transition_length = 2, state_length = 1)
+
+# pkgdown error
+packageVersion("pkgdown")
+```
